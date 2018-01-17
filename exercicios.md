@@ -71,6 +71,17 @@ for(var i = 0; i < listaDeFuncoes.length; i++) {
 
 
 
+## Cartão some no peixinho
+- Vai sumir de forma pulante
+- É só adicionar uma classe
+    - Classe criada
+
+
+
+
+
+
+
 
 
 

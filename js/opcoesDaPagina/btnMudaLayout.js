@@ -39,6 +39,12 @@ btn.addEventListener('click', mudaLayout)
 
 // - Cria o evento: click
 
+// Progressive Enhancement = Carregamento Progressivo (Oferecer quando tem disponivel)
+// - Muda layout 
+// - Busca
+// - Ajudas
+// - Sync
+btn.classList.remove('no-js')
 
 
 

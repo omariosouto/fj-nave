@@ -8,12 +8,17 @@
 	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
 	background: #EBEF40;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
-	transition: transform .2s ease-in;
+	transition: 3s ease-in;
 }
 
-.cartao--some {
+/* .cartao--some {
 	opacity: 0;
 	transition: 0.5s;
+} */
+
+.cartao--somePeixinho {
+	transform: translate(0px, -200px) rotate(900deg);
+	opacity: 0;
 }
 
 .cartao.cartao--focado,
