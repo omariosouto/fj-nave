@@ -76,6 +76,31 @@ for(var i = 0; i < listaDeFuncoes.length; i++) {
 - É só adicionar uma classe
     - Classe criada
 
+## ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
