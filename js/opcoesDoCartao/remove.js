@@ -3,17 +3,15 @@
 // Imediamtamente
 // Instantaneamente
 // (IIFE)
-console.log('This na vida real', this)
 ;(function () {
-
     // 1 - REMOVE OS: onclick="this.parentNode.parentNode.remove();"
     // Pega o elemento
     const btns = document.querySelectorAll('.opcoesDoCartao-remove')
-
-    for(let i = 0; i < btns.length; i++) {
-        btns[i].addEventListener('click', function () {
-            console.log(i)
-            const cartao = btns[i].parentNode.parentNode
+    console.log(btns)
+    for(let btn of btns) { // let i = 0; i < btns.length; i++
+        console.log(btn)
+        btn.addEventListener('click', function () {
+            const cartao = btn.parentNode.parentNode
 
             cartao.classList.add('cartao--somePeixinho')
 
