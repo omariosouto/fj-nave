@@ -44,16 +44,12 @@
             // $tagConteudo.classList.add('cartao-conteudo')
 
             // Criar elemento de forma sonhadora: Declarativa
-            const $tpl = document.createElement('tpl')
-            $tpl.innerHTML = `
+            const $cartao = $(`
             <article id="cartao_${contador}" class="cartao" tabindex="0">
                 <div class="opcoesDoCartao">
-                    <!-- this em eventos de elementos = elemento -->
-                    <!-- Exercicio 8 da apostila  do **PDF** -->
                     <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">
                     <svg><use xlink:href="#iconeRemover"></use></svg>
-                    </button>
-                
+                    </button>            
                     <input type="radio" name="corDoCartao${contador}" value="#EBEF40" id="corPadrão-cartao${contador}" class="opcoesDoCartao-radioTipo" checked>
                     <label for="corPadrão-cartao${contador}" class="opcoesDoCartao-tipo opcoesDoCartao-opcao" style="color: #EBEF40;" tabindex="0">
                     Padrão
@@ -76,10 +72,49 @@
                 </div>
                 <p class="cartao-conteudo" contenteditable tabindex="0">${conteudo}</p>
             </article>
-            `
-            const $cartao = $tpl.querySelector('.cartao')
+            `)
 
-            document.querySelector('.mural').insertAdjacentElement('afterbegin', $cartao)
+            $cartao.on('focusin', function() {
+                console.log('bagulhos')
+                //console.log('Fazendo os bagulhos funcionarem')
+                $cartao.addClass('cartao--focado')
+            })
+    
+            $cartao.on('focusout', function() {
+                //console.log('Fazendo os bagulhos funcionarem')
+                $cartao.removeClass('cartao--focado')
+            })
+    
+            // Adiciona evento e faz delegate
+            $cartao.on('change', '.opcoesDoCartao-radioTipo',function(event) {
+                const $elementoAtual = $(event.target)
+                const novaCor = $elementoAtual.val()
+                $cartao.css('background', novaCor)
+            })
+    
+            $cartao.on('keydown', function(event) {
+                const $elementoAtual = $(event.target)
+                const isLabel = $elementoAtual.hasClass('opcoesDoCartao-opcao')
+                // Quando? 
+                if(isLabel && ( event.key === 'Enter' || event.key === ' ' )) {
+                    $elementoAtual.click()
+                }
+            })
+    
+            // Implementar o Remove com Delegate
+            $cartao.on('click', function (event) {
+                const $elementoAtual = $(event.target)
+                const isRemove = $elementoAtual.hasClass('opcoesDoCartao-remove')
+    
+                if(isRemove) {
+                    $cartao.addClass('cartao--somePeixinho')
+                    $cartao.on('transitionend', function() {
+                        $cartao.remove()
+                    })
+                }
+            })        
+
+            $('.mural').prepend($cartao)
 
 
         }
