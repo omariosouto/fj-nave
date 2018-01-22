@@ -24,3 +24,7 @@ https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-i
 https://www.google.com.br/search?q=clean+code&oq=clean+code&aqs=chrome.0.0l6.3561j0j4&sourceid=chrome&ie=UTF-8
 
 https://www.amazon.com.br/Segredos-Ninja-Javascript-John-Resig/dp/8575223283?tag=goog0ef-20&smid=A1ZZFT5FULY4LN&ascsubtag=07d5efbd-3e89-40ad-9309-77b3c33a504d
+
+## Firefox 22 e outras versões
+
+https://ftp.mozilla.org/pub/firefox/releases/22.0/win32/pt-BR/

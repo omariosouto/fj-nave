@@ -5,7 +5,7 @@
 let contador = document.querySelectorAll('.cartao').length
 
                             // Parametro padrao: Default parameters
-function criarCartao(conteudo, cor = '') {
+function criarCartao({msg:conteudo, cor = 'green'}) {
     contador++
     // console.log('Criar cartao em construção', conteudo)
 

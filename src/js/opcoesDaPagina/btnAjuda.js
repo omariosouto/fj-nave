@@ -17,7 +17,7 @@
                 {msg: '"Acessivelzaodaporra"', cor: 'white'}
             ]
 
-        ajudas.reverse().forEach(ajuda => criarCartao(ajuda.msg, ajuda.cor))
+        ajudas.reverse().forEach(ajuda => criarCartao(ajuda))
 
         // Implementação do "forEach"
         // function forEach(array, funcaoCallback) {

@@ -1,0 +1,24 @@
+{
+  "name": "fj-nave",
+  "version": "1.0.0",
+  "description": "Avaliacao: https://goo.gl/forms/TzuHg4Ux3Y0AyjxU2 \\o/",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omariosouto/fj-nave.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omariosouto/fj-nave/issues"
+  },
+  "homepage": "https://github.com/omariosouto/fj-nave#readme"
+}

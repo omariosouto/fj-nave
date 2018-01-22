@@ -31,7 +31,7 @@
             // Apostila Ex: 22
             // RANCA TUDO DAQUI E MOVE PRO mural.js
             // Cria a funcao
-            criarCartao(conteudo)
+            criarCartao({msg: conteudo})
         }
         $campoDeConteudo.value = ''
     })
