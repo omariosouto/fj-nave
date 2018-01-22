@@ -11,6 +11,8 @@ http://flexboxfroggy.com/
 ## Email pra contatinho
 mario.souto@caelum.com.br
 
+artur.adam@caelum.com.br
+
 ## Html e Posicionamento
 https://twitter.com/srsaude -> Fala que eu brinco com ele
 

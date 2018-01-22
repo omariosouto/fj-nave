@@ -32,7 +32,7 @@
         <button id="btnAjuda" class="opcoesDaPagina-opcao opcoesDaPagina-botao no-js">
           ?
         </button>
-        <button id="btnSync" class="opcoesDaPagina-opcao opcoesDaPagina-botao botaoSync botaoSync--sincronizado no-js">
+        <button id="btnSync" class="opcoesDaPagina-opcao opcoesDaPagina-botao botaoSync no-js">
           <svg class="botaoSync-icone">
             <use xlink:href="#iconeSincronizar"></use>
           </svg>
@@ -51,12 +51,20 @@
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    
+    <script src="./js/polyfill/key.js"></script>
+    <script>keyboardeventKeyPolyfill.polyfill()</script>
+    
+    <script src="./js/opcoesDaPagina/btnSync.js"></script>
     <script src="./js/opcoesDaPagina/btnMudaLayout.js"></script>
     <script src="./js/opcoesDoCartao/remove.js"></script>
     <script src="./js/mural.js"></script>
     <script src="./js/formNovoCartao.js"></script>
     <script src="./js/opcoesDaPagina/btnAjuda.js"></script>
 
+    <script src="http://ceep.herokuapp.com/cartoes/carregar/?usuario=art&callback=carregar"></script>
+    
     <script>
       // document.querySelector('.cartao-conteudo').addEventListener('click', function() {
       //   console.log('Clicou no conteudo do cartao', event.path)

@@ -4,8 +4,12 @@
 // ${ cor ? '' : 'checked' }
 let contador = document.querySelectorAll('.cartao').length
 
+const listaCartoes = []
                             // Parametro padrao: Default parameters
-function criarCartao({msg:conteudo, cor = 'green'}) {
+function criarCartao({conteudo, cor = ''}) {
+
+    listaCartoes.push({conteudo, cor})
+
     contador++
     // console.log('Criar cartao em construção', conteudo)
 
@@ -70,6 +74,8 @@ function criarCartao({msg:conteudo, cor = 'green'}) {
         const $elementoAtual = $(event.target)
         const isLabel = $elementoAtual.hasClass('opcoesDoCartao-opcao')
         // Quando? 
+
+        console.log("Tecla: ", event.key)
         if(isLabel && ( event.key === 'Enter' || event.key === ' ' )) {
             $elementoAtual.click()
         }
@@ -93,4 +99,35 @@ function criarCartao({msg:conteudo, cor = 'green'}) {
 
 window.criarCartao = criarCartao
 
+window.listaCartoes = listaCartoes
+
+$.ajax({
+    url: "http://ceep.herokuapp.com/cartoes/carregar/"
+    ,method: "GET"
+    ,dataType: "jsonp"
+    ,data: {
+        usuario: "art"
+    }
+    ,success: function(resposta){
+        const ajudas = resposta.cartoes
+
+        ajudas.reverse().forEach(ajuda => criarCartao(ajuda))
+    }
+})
+
+// //  handler
+// // callback
+
 })(jQuery)
+
+
+// PWA
+// fetch
+// Cache
+// m.uber.com
+
+
+// Build
+
+
+// Arquitetura
